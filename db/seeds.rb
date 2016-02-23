@@ -12,16 +12,21 @@ require "faker"
 User.destroy_all
 Announce.destroy_all
 
-100.times do
-  users = User.new(
+10.times do
+  user = User.new(
     name: Faker::Name.name,
     email: Faker::Internet.email)
-  users.save
+  user.save
+
+
+  10.times do
+    announce = Announce.new(
+      name: Faker::Name.name,
+      description: Faker::Lorem.sentence)
+    announce.user = user
+    announce.save
+
+  end
+
 end
 
-100.times do
-  announces = Announce.new(
-    name: Faker::Name.name,
-    description: Faker::Lorem.sentence)
-  announces.save
-end
