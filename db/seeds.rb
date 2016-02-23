@@ -9,6 +9,8 @@
 require "faker"
 
 # TODO: Write a seed to insert 100 posts in the database
+User.destroy_all
+Announce.destroy_all
 
 100.times do
   users = User.new(
