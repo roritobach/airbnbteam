@@ -31,6 +31,5 @@ Announce.destroy_all
 
 end
 
-
 puts "create #{User.count} users"
 puts "create #{Announce.count} announces"
