@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'announces/index'
+
+  get 'announces/show'
+
+  get 'announces/new'
+
+  get 'announces/create'
+
   root 'pages#contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
