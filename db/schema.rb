@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160224164414) do
+=======
+ActiveRecord::Schema.define(version: 20160223161916) do
+>>>>>>> e0ce8b03f4f8f2d7949f5f4b5f8afa5bed7350fc
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +47,7 @@ ActiveRecord::Schema.define(version: 20160224164414) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
+<<<<<<< HEAD
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -50,5 +55,24 @@ ActiveRecord::Schema.define(version: 20160224164414) do
   end
 
   add_foreign_key "announce_photos", "announces"
+=======
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+>>>>>>> e0ce8b03f4f8f2d7949f5f4b5f8afa5bed7350fc
   add_foreign_key "announces", "users"
 end

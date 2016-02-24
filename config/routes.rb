@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
 
 
 
@@ -6,6 +7,23 @@ Rails.application.routes.draw do
 
 
 
+=======
+  get 'users/index'
+
+  get 'users/show'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/destroy'
+
+  devise_for :users
+>>>>>>> e0ce8b03f4f8f2d7949f5f4b5f8afa5bed7350fc
   root 'pages#contact'
 
   # The priority is based upon order of creation: first created -> highest priority.

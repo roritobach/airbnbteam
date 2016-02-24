@@ -1,16 +1,22 @@
 
 <div class="banner" >
   <div class="banner-content">
+<<<<<<< HEAD
     <h1>Some Stuff</h1>
     <p>Very cool stuff, useful and smart</p>
     <%= link_to " All announces", announces_path, class:'btn btn-primary' %>
+=======
+    <h1>Our homes are yours</h1>
+    <p>COoL places and smart people</p>
+    <a class="btn btn-primary btn-lg">GO</a>
+>>>>>>> e0ce8b03f4f8f2d7949f5f4b5f8afa5bed7350fc
   </div>
 </div>
 
 
 <div class="wrapper-grey padded">
   <div class="container">
-  <h2 class="text-center"> That for You Buddy</h2>
+  <h2 class="text-center"> Explore our World's Announces</h2>
     <div class="row">
     <% @announces.each do |announce| %>
       <div class="col-xs-12 col-md-4">
@@ -25,8 +31,6 @@
 
       <%= render 'components/mailbox' %>
 
-
-      <!-- insert <div class="card"> -->
     </div>
   </div>
 </div>

@@ -203,8 +203,11 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   bootstrap_form
+<<<<<<< HEAD
   carrierwave
   cloudinary
+=======
+>>>>>>> e0ce8b03f4f8f2d7949f5f4b5f8afa5bed7350fc
   devise
   faker
   figaro
