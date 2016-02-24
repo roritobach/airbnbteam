@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+
+
+  resources 'announces', only: [:index, :new, :create, :show]
+
+
+
   root 'pages#contact'
 
   # The priority is based upon order of creation: first created -> highest priority.

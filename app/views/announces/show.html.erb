@@ -1,0 +1,8 @@
+<div class="text-center">
+<h1> Description of this Announce</h1>
+  <h2><%= @announce.name %></h2>
+  <p><%= @announce.description %></p>
+  <% @announce.photos.each do |p| %>
+    <%= cl_image_tag p.photo_url(:standard) %>
+  <% end %>
+</div>

@@ -1,0 +1,22 @@
+<div class="wrapper-grey padded">
+
+  <div class="container">
+    <h1 class="text-center"> List of all Announces</h1>
+    <br>
+    <br>
+
+      <div class="row">
+         <% @announces.each do |announce| %>
+            <div class="col-xs-12 col-md-4">
+              <%= render 'announce', announce: announce %>
+              <%= link_to "plus de details", announce_path(announce) %>
+            </div>
+        <% end %>
+
+      </div>
+
+  </div>
+</div>
+
+
+

@@ -1,0 +1,10 @@
+<h1>Announces#new</h1>
+<p>Find me in app/views/announces/new.html.erb</p>
+
+
+<%= bootstrap_nested_form_for(@announce, html: { multipart: true }) do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :description %>
+  <%= f.file_field :photos, multiple: true %>
+  <%= f.submit  %>
+<% end %>
