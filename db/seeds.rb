@@ -15,8 +15,9 @@ Announce.destroy_all
 10.times do
   user = User.new(
     name: Faker::Name.name,
-    email: Faker::Internet.email)
-  user.save
+    email: Faker::Internet.email,
+    password: "88888888")
+  user.save!
 
 
   10.times do
@@ -24,9 +25,11 @@ Announce.destroy_all
       name: Faker::Name.name,
       description: Faker::Lorem.sentence)
     announce.user = user
-    announce.save
+    announce.save!
 
   end
 
 end
 
+puts "create #{User.count} users"
+puts "create #{Announce.count} announces"
