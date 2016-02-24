@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  get 'announces/index'
 
-  get 'announces/show'
+  resources 'announces', only: [:index, :new, :create, :show]
 
-  get 'announces/new'
-
-  get 'announces/create'
 
   root 'pages#contact'
 
