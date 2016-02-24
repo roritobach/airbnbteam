@@ -15,8 +15,10 @@ gem 'uglifier'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'bootstrap_form'
 gem 'autoprefixer-rails'
 gem 'cloudinary'
+gem 'nested_form'
 gem 'carrierwave'
 
 group :development, :test do

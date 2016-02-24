@@ -50,6 +50,7 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bootstrap_form (2.3.0)
     builder (3.2.2)
     byebug (8.2.2)
     carrierwave (0.10.0)
@@ -102,6 +103,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    nested_form (0.3.2)
     netrc (0.11.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
@@ -200,6 +202,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass
+  bootstrap_form
   carrierwave
   cloudinary
   devise
@@ -208,6 +211,7 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
+  nested_form
   pg
   pry-byebug
   pry-rails

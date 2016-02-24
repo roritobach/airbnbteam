@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+
+
   resources 'announces', only: [:index, :new, :create, :show]
+
 
 
   root 'pages#contact'
