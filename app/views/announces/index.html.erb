@@ -8,7 +8,7 @@
       <div class="row">
          <% @announces.each do |announce| %>
             <div class="col-xs-12 col-md-4">
-              <%= render 'components/cards', announce: announce %>
+              <%= render 'announce', announce: announce %>
               <%= link_to "plus de details", announce_path(announce) %>
             </div>
         <% end %>

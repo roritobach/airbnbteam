@@ -1,14 +1,14 @@
 
 
 
-<div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://lorempixel.com/400/200/city');">
+<div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= announce.photos.first.photo_url(:standard) %> ');">
   <div class="card-category"> Hello </div>
   <div class="card-description">
   <h2><%= announce.name %></h2>
   <p><%= announce.description %></p>
 
   </div>
-  <img class="card-user avatar" src="http://lorempixel.com/80/80/people">
+  <img class="card-user avatar" src="<%= announce.user.photo_url(:bright_face) %>">
   <a class="card-link" href="#" ></a>
 </div>
           <!-- insert <div class="card"> -->

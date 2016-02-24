@@ -24,6 +24,33 @@ class AnnouncesController < ApplicationController
     redirect_to announces_path
   end
 
+  def edit
+
+  @announce = Announce.find(params[:id])
+
+  end
+
+  def update
+      @announce = Announce.new(announce_params)
+    @announce.save
+    if params[:announce]['photos']
+      params[:announce]['photos'].each do |p|
+        @announce.photos.create!(photo: p, announce: @announce)
+      end
+    end
+    redirect_to announces_path
+  end
+
+
+  def destroy
+    @announce = Announce.find(params[:id])
+    @announce.delete
+  end
+
+
+
+
+
   def announce_params
     params.require(:announce).permit(:description,:name, photos_attributes: [:id,:announce_id,:description,:_destroy])
   end

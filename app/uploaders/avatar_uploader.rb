@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class PhotoUploader < CarrierWave::Uploader::Base
+class AvatarUploader < CarrierWave::Uploader::Base
     include Cloudinary::CarrierWave
 
 
@@ -19,6 +19,10 @@ class PhotoUploader < CarrierWave::Uploader::Base
     resize_to_fit 800, 600
   end
 
+  version :bright_face do
+    cloudinary_transformation effect: "brightness:30", radius: 20,
+      width: 150, height: 150, crop: :thumb, gravity: :face
+  end
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
