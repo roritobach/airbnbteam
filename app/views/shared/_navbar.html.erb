@@ -1,13 +1,9 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-<<<<<<< HEAD
-  <a href="/" class="navbar-wagon-brand">
-    <img src="http://lorempixel.com/300/300/city" />
-=======
     <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <img src="http://unsplash.it/300/300">
+      <img src="http://unsplash.it/300/300">
     <% end %>
->>>>>>> e0ce8b03f4f8f2d7949f5f4b5f8afa5bed7350fc
+
   </a>
 
   <!-- Right Navigation -->
@@ -47,29 +43,10 @@
                 <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
               <% end %>
             </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
-              <% end %>
-            </li>
+
           </ul>
         </div>
       </div>
-<<<<<<< HEAD
-    </a>
-
-    <!-- Profile picture and dropdown -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <img src="http://lorempixel.com/50/50/people" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
-      </div>
-    </div>
-=======
 
     <% else %>
 
@@ -77,7 +54,6 @@
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% end %>
->>>>>>> e0ce8b03f4f8f2d7949f5f4b5f8afa5bed7350fc
 
     <!-- Button (call-to-action) -->
     <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
