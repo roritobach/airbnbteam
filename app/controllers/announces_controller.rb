@@ -15,13 +15,19 @@ class AnnouncesController < ApplicationController
 
   def create
     @announce = Announce.new(announce_params)
-    @announce.save
-    if params[:announce]['photos']
-      params[:announce]['photos'].each do |p|
-        @announce.photos.create!(photo: p, announce: @announce)
-      end
+    @announce.user = current_user
+
+    #if params[:announce]['photos']
+    #  params[:announce]['photos'].each do |p|
+    #   @announce.photos.create!(photo: p, announce: @announce)
+    #  end
+    #
+    if @announce.save
+      redirect_to announce_path @announce
+    else
+      render :new
+
     end
-    redirect_to announces_path
   end
 
   def edit
