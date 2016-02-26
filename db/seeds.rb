@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Faker::Config.locale = :fr
+
 require "faker"
 
 # TODO: Write a seed to insert 100 posts in the database
@@ -23,7 +25,8 @@ Announce.destroy_all
   10.times do
     announce = Announce.new(
       name: Faker::Name.name,
-      description: Faker::Lorem.sentence)
+      description: Faker::Lorem.sentence,
+      address: Faker::Address.street_address + ', France')
     announce.user = user
     announce.save!
 

@@ -4,6 +4,7 @@ class Announce < ActiveRecord::Base
   validates :name, :description, presence: true
   validates :user, presence: true
 
+  # geocoded_by :full_street_address
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
 
@@ -14,4 +15,9 @@ class Announce < ActiveRecord::Base
       self.photos.first.photo_url(:standard)
     end
   end
+
+  # def full_street_address
+  # [address, city, state, country].compact.join(', ')
+  # end
+
 end
