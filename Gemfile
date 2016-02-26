@@ -20,6 +20,14 @@ gem 'autoprefixer-rails'
 gem 'cloudinary'
 gem 'nested_form'
 gem 'carrierwave'
+gem 'geocoder'
+gem "coffee-rails"
+gem "gmaps4rails"
+gem 'pongal', '~> 0.0.1'
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
 
 group :development, :test do
   gem 'binding_of_caller'
