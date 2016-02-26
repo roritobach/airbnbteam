@@ -20,6 +20,7 @@ gem 'autoprefixer-rails'
 gem 'cloudinary'
 gem 'nested_form'
 gem 'carrierwave'
+gem 'omniauth'
 
 group :development, :test do
   gem 'binding_of_caller'

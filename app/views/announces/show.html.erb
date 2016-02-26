@@ -1,44 +1,62 @@
 
 
 
-<section class="readme-section" id="media">
-        <h2 class="readme-header"><%= @announce.name %></h2>
-        <div class="media">
-  <div class="media-body">
-    <div class="media-section">
-      <h2 class="section-heading">Pictures</h2>
-       <% @announce.photos.each do |p| %>
-    <%= cl_image_tag p.photo_url(:standard) %>
-  <% end %>
 
-    </div>
-    <div class="media-section">
-      <h2 class="section-heading">Description</h2>
-      <p>
-        <%= @announce.description %>
 
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure cumque, ipsa consequatur quia explicabo, deserunt quibusdam eveniet, quo laudantium ipsam odio sapiente excepturi voluptas, enim doloremque officia? Iusto, fugit assumenda!
-      </p>
-    </div>
+
+
+
+
+<div class="text-center">
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+
+    <% @announce.photos.each_with_index do |p, index| %>
+
+     <div class="item <%= "active" if index == 0  %> ">
+           <%= image_tag p.photo_url(:standard) %>
+          <div class="carousel-caption">
+          <h3> <%= @announce.name %> </h3>
+          <p> <%= @announce.description %> </p>
+          </div>
+        </div>
+    <% end %>
+
+
   </div>
-  <div class="media-aside">
-    <div class="media-section">
-      <h2 class="section-heading"><i class="fa fa-share-square-o"></i> Share</h2>
-      <div class="share-links">
-        <a href="#" class="share-link bg-facebook text-center">
-          <i class="fa fa-facebook"></i>
-        </a>
-        <a href="#" class="share-link bg-twitter text-center">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a href="#" class="share-link bg-email text-center">
-          <i class="fa fa-envelope-o"></i>
-        </a>
-        <a href="#" class="share-link bg-text text-center">
-          <i class="fa fa-mobile"></i>
-        </a>
-      </div>
-    </div class="media-section">
+    </div>
+
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
   </div>
 </div>
+
+<% content_for :after_js do %>
+<script>
+  $('.carousel').carousel({
+    interval: 4000
+  })
+
+</script>
+
+<% end %>
