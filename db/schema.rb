@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160226114920) do
+=======
+ActiveRecord::Schema.define(version: 20160226142604) do
+>>>>>>> 58c0266ca28b4e81d6c25324acd6776333863c21
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +34,9 @@ ActiveRecord::Schema.define(version: 20160226114920) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "address"
   end
 
   add_index "announces", ["user_id"], name: "index_announces_on_user_id", using: :btree
@@ -56,6 +63,7 @@ ActiveRecord::Schema.define(version: 20160226114920) do
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
     t.string   "photo"
+<<<<<<< HEAD
     t.string   "provider"
     t.string   "uid"
     t.string   "picture"
@@ -63,6 +71,8 @@ ActiveRecord::Schema.define(version: 20160226114920) do
     t.string   "last_name"
     t.string   "token"
     t.datetime "token_expiry"
+=======
+>>>>>>> 58c0266ca28b4e81d6c25324acd6776333863c21
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
