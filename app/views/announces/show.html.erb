@@ -40,5 +40,14 @@
       </div>
     </div class="media-section">
 
+    <% content_for(:after_js) do %>
+      <%= javascript_tag do %>
+        $(document).ready(function() {
+      var coord = <%= raw @announce_coordinates %>;
+      alert('Announce coordinates are ' + coord.lat + ', ' + coord.lng);
+      });
+      <% end %>
+    <% end %>
+
   </div>
 </div>

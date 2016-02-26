@@ -2,10 +2,16 @@ class AnnouncesController < ApplicationController
 
   def index
     @announces = Announce.all
+    @markers = Gmaps4rails.build_markers(@announces) do |announce, marker|
+      marker.lat flat.latitude
+      marker.lng flat.longitude
+    end
   end
 
   def show
     @announce = Announce.find(params[:id])
+    @announce_coordinates = { lat: @announce.lat, lng: @announce.lng }
+    @alert_message = "You are viewing #{@announce.name}"
   end
 
   def new

@@ -4,8 +4,8 @@ class Announce < ActiveRecord::Base
   validates :name, :description, presence: true
   validates :user, presence: true
 
-  geocoded_by :description
-  after_validation :geocode, if: :description_changed?
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
 
   def first_photo
     if self.photos.first.nil?

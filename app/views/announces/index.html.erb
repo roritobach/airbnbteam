@@ -9,12 +9,26 @@
          <% @announces.each do |announce| %>
             <div class="col-xs-12 col-md-4">
               <%= render 'announce', announce: announce %>
-              <%= link_to "plus de details", announce_path(announce) %>
+              <%= link_to "More details", announce_path(announce) %>
             </div>
         <% end %>
-          <%= link_to "Une nouvelle announce", new_announce_path %>
-
+          <%= link_to "A new announce", new_announce_path %>
       </div>
+
+      <div id="map" style="width: 100%; height: 600px;"></div>
+
+      <% content_for(:after_js) do %>
+        <%= javascript_tag do %>
+          $(document).on('ready', function() {
+            handler = Gmaps.build('Google');
+            handler.buildMap({ internal: { id: 'map' } }, function(){
+              markers = handler.addMarkers(<%= raw @markers.to_json %>);
+              handler.bounds.extendWith(markers);
+              handler.fitMapToBounds();
+            });
+          })
+        <% end %>
+      <% end %>
 
   </div>
 </div>
