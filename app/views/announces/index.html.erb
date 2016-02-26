@@ -10,6 +10,7 @@
             <div class="col-xs-12 col-md-4">
               <%= render 'announce', announce: announce %>
               <%= link_to "plus de details", announce_path(announce) %>
+              <%= link_to "editez", edit_announce_path(announce) %>
             </div>
         <% end %>
           <%= link_to "Une nouvelle announce", new_announce_path %>

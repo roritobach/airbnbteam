@@ -2,3 +2,64 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  padding: 50px;
+}
+#carousel-example-generic {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+
+
+}
+.carousel-control.right {
+  background-image: none;
+  margin-left: auto;
+  margin-top: left;
+}
+.item .active {
+    margin-left: auto;
+  margin-top: left;
+
+}
+.carousel-control.left {
+  background-image: none;
+
+}
+.carousel .item {
+  min-height: 350px;
+  height: 100%;
+  width:100%;
+}
+.media-body {
+  flex: 1 1 auto;
+  padding: 20px;
+}
+.media-body img {
+  width: 100%;
+}
+.media-aside {
+  flex: 0 0 400px;
+  padding: 30px;
+  align-self: stretch;
+  background: #F8F7F7;
+  border-left: 1px solid #f0efef;
+}
+.media-section {
+  margin: 40px auto;
+}
+.media-section:first-child {
+  margin-top: 0;
+}
+.media-section:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+

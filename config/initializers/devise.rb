@@ -14,6 +14,13 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'contact@airbnbteam.com'
 
+  config.omniauth :facebook, "211864242501021", "e79812bfd96ab0b337b925a232ccb098"
+
+  Devise.setup do |config|
+  config.omniauth :facebook, ENV["FB_ID"], ENV["FB_SECRET"], scope: 'email', info_fields: 'email, first_name,last_name', image_size: 'large'
+end
+
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 

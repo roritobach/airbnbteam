@@ -20,6 +20,9 @@ gem 'autoprefixer-rails'
 gem 'cloudinary'
 gem 'nested_form'
 gem 'carrierwave'
+gem 'omniauth-facebook'
+gem "letter_opener"
+
 
 group :development, :test do
   gem 'binding_of_caller'
@@ -29,6 +32,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'spring'
   gem 'faker'
+  gem "letter_opener"
+
 end
 
 group :production do
